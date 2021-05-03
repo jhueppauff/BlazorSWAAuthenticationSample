@@ -1,16 +1,16 @@
 ﻿<cascadingauthenticationstate>
-    <Router AppAssembly="@typeof(Program).Assembly" PreferExactMatches="@true">
-        <Found Context="routeData">
+    <router appassembly="@typeof(Program).Assembly">
+        <found context="routeData">
             <authorizerouteview routedata="@routeData" defaultlayout="@typeof(MainLayout)">
                 <notauthorized>
-                    <redirecttologin></redirecttologin>
+                       <redirecttologin></redirecttologin>
                 </notauthorized>
             </authorizerouteview>
-        </Found>
-        <NotFound>
-            <LayoutView Layout="@typeof(MainLayout)">
+        </found>
+        <notfound>
+            <layoutview layout="@typeof(MainLayout)">
                 <p>Sorry, there's nothing at this address.</p>
-            </LayoutView>
-        </NotFound>
-    </Router>
+            </layoutview>
+        </notfound>
+    </router>
 </cascadingauthenticationstate>
