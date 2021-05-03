@@ -3,5 +3,8 @@
     "azureFunctions.projectLanguage": "C#",
     "azureFunctions.projectRuntime": "~3",
     "debug.internalConsoleOptions": "neverOpen",
-    "azureFunctions.preDeployTask": "publish"
+    "azureFunctions.preDeployTask": "publish",
+    "staticWebApps.appSubpath": "frontend",
+    "staticWebApps.apiSubpath": "backend",
+    "staticWebApps.outputSubpath": "wwwroot"
 }
