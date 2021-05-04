@@ -19,7 +19,7 @@ namespace Function
         {
             log.LogInformation("C# HTTP trigger function processed a request.");
 
-            return new OkObjectResult("Welcome to Azure Static Web and Azure Functions!");
+            return new OkObjectResult(new Model.Response() { Message = "Welcome to Azure Static Web and Azure Functions!"});
         }
     }
 }

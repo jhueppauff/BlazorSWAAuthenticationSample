@@ -10,20 +10,25 @@
 
 <p>This component demonstrates fetching data from the server.</p>
 
-@if (responseText == null)
+@if (response.Message == null)
 {
     <p><em>Loading...</em></p>
 }
 else
 {
-    <p><em>@responseText</em></p>
+    <p><em>@response.Message</em></p>
 }
 
 @code {
-    private string responseText;
+    private Response response;
 
     protected override async Task OnInitializedAsync()
     {
-        responseText = await Http.GetFromJsonAsync<string>("/api/HelloSWA");
+        response = await Http.GetFromJsonAsync<Response>("/api/HelloSWA");
+    }
+
+    public class Response
+    {
+        public string Message { get; set; }
     }
 }
