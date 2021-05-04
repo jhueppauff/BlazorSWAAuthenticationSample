@@ -10,13 +10,13 @@
 
 <p>This component demonstrates fetching data from the server.</p>
 
-@if (response.Message == null)
+@if (response.message == null)
 {
     <p><em>Loading...</em></p>
 }
 else
 {
-    <p><em>@response.Message</em></p>
+    <p><em>@response.message</em></p>
 }
 
 @code {
@@ -24,11 +24,11 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        response = await Http.GetFromJsonAsync<Response>("/api/HelloSWA");
+        response = await Http.GetFromJsonAsync<Response>("/api/HelloSWA").ConfigureAwait(false);
     }
 
     public class Response
     {
-        public string Message { get; set; }
+        public string message { get; set; }
     }
 }
