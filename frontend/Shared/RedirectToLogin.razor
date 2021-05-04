@@ -3,6 +3,6 @@
 @code {
     protected override void OnInitialized()
     {
-        Navigation.NavigateTo($"/.auth/login/github?post_login_redirect={Uri.EscapeDataString(Navigation.Uri)}");
+        Navigation.NavigateTo($"/.auth/login/github?post_login_redirect={Uri.EscapeDataString(Navigation.Uri)}", true);
     }
 }
